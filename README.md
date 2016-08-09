@@ -1,5 +1,7 @@
 # ngDialog
 
+A minimalistic, easy to use, and easy to customize, dialog module fully compatible with AngularJS 1.x.x.
+
 Installation
 -
     
@@ -92,6 +94,10 @@ Example
 -
 
 Clone the repo to observe a basic implementation of the `ngDialog` module.
+
+Customizing with _Stylus_
+
+...
 
 Credits
 -
