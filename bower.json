@@ -1,0 +1,31 @@
+{
+  "name": "ngDialog",
+  "main": "ngDialog.js",
+  "authors": [
+    "Ahmad Baktash Hayeri <baktash93@gmail.com>"
+  ],
+  "description": "Custom AngularJS dialog/modal module.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular-dialog",
+    "angular-modal",
+    "ng-modal",
+    "ng-dialog",
+    "ngDialog",
+    "ngModal"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8"
+  }
+}
