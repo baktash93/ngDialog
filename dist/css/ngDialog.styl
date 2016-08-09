@@ -1,0 +1,131 @@
+get-dialog-close-sign-hover-background()
+  if luminosity(dialog-button-hover-background) < .5 and luminosity(dialog-button-background) < .5
+    dialog-button-color
+  else
+    dialog-button-background
+
+.ng-dialog
+  font-family dialog-font-family
+  position fixed
+  top 50%
+  left 50%
+  width 50%
+  max-width 630px
+  min-width 320px
+  height auto
+  z-index 2000
+  visibility hidden
+  -webkit-backface-visibility hidden
+  -moz-backface-visibility hidden
+  backface-visibility hidden
+  -webkit-transform translateX(-50%) translateY(-50%)
+  -moz-transform translateX(-50%) translateY(-50%)
+  -ms-transform translateX(-50%) translateY(-50%)
+  transform translateX(-50%) translateY(-50%)
+
+.ng-dialog-show
+  visibility visible
+  & ~ .ng-dialog-overlay
+    opacity 1
+    visibility visible
+
+.ng-dialog-overlay
+  position fixed
+  width 100%
+  height 100%
+  visibility hidden
+  top 0
+  left 0
+  z-index 1000
+  opacity 0
+  background dialog-overlay-background
+  -webkit-transition all 0.3s
+  -moz-transition all 0.3s
+  transition all 0.3s
+
+.ng-dialog-content
+  color dialog-content-color
+  background dialog-content-background
+  position relative
+  border-radius dialog-content-border-radius
+  margin 0 auto
+  h3
+    margin 0
+    padding 0.4em
+    text-align center
+    font-size 2.4em
+    font-weight 300
+    opacity 0.8
+    background dialog-heading-background
+    border-radius dialog-heading-border-radius
+  & > div
+    padding 15px 40px 30px
+    margin 0
+    font-weight 300
+    font-size 1.15em
+  button
+    display block
+    margin 0 auto
+    font-size 0.8em
+
+button
+  border none
+  padding 0.6em 1.2em
+  background dialog-button-background
+  color dialog-button-color
+  font-family dialog-font-family
+  font-size 1em
+  letter-spacing 1px
+  text-transform uppercase
+  cursor pointer
+  display inline-block
+  margin 3px 2px
+  border-radius 2px
+  &:hover
+    background dialog-button-hover-background
+.ng-dialog
+  a
+    outline none
+.ng-dialog
+  .close-sign-box
+    position absolute
+    z-index 2001
+    right 6px
+    top 5px
+    display inline-block
+    border-radius 50%
+    border 1px solid dialog-button-background
+    padding 1px
+    width 16px
+    height 16px
+  .close-sign
+    display inline-block
+    height 16px
+    overflow hidden
+    position relative
+    width 16px
+    &::before
+      transform rotate(45deg)
+    &::after
+      transform rotate(-45deg)
+
+.ng-dialog .close-sign::before,
+.ng-dialog .close-sign::after
+  height 4px
+  margin-top -2px
+  background dialog-color
+  content ""
+  height 2px
+  left 0
+  border-radius 5px
+  margin-top -1px
+  position absolute
+  top 50%
+  width 100%
+.ng-dialog
+  .close-sign-box
+    &:hover
+      background dialog-button-hover-background
+      .close-sign::before
+      & .close-sign::after
+        background get-dialog-close-sign-hover-background()

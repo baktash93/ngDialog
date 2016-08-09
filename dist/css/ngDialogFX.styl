@@ -1,0 +1,123 @@
+.ng-dialog-fx-default
+  .ng-dialog-content
+    -webkit-transform scale(0.7)
+    -moz-transform scale(0.7)
+    -ms-transform scale(0.7)
+    transform scale(0.7)
+    opacity 0
+    -webkit-transition all 0.3s
+    -moz-transition all 0.3s
+    transition all 0.3s
+
+.ng-dialog-show
+  &.ng-dialog-fx-default
+    .ng-dialog-content
+      -webkit-transform scale(1)
+      -moz-transform scale(1)
+      -ms-transform scale(1)
+      transform scale(1)
+      opacity 1
+  &.ng-dialog-fx-full-screen
+    .ng-dialog-content
+      -webkit-transform scale(1)
+      -moz-transform scale(1)
+      -ms-transform scale(1)
+      transform scale(1)
+      opacity 1
+  &.ng-dialog-fx-window
+    .ng-dialog-content
+      -webkit-transform scale(1)
+      -moz-transform scale(1)
+      -ms-transform scale(1)
+      transform scale(1)
+      opacity 1
+  &.ng-dialog-fx-sticky-top
+    .ng-dialog-content
+      -webkit-transform translateY(0%)
+      -moz-transform translateY(0%)
+      -ms-transform translateY(0%)
+      transform translateY(0%)
+      border-radius 0 0 3px 3px
+      opacity 1
+  &.ng-dialog-fx-slide-right
+    .ng-dialog-content
+      -webkit-transform translateX(0)
+      -moz-transform translateX(0)
+      -ms-transform translateX(0)
+      transform translateX(0)
+      opacity 1
+
+.ng-dialog-fx-full-screen
+  .ng-dialog-content
+    -webkit-transform scale(0.8)
+    -moz-transform scale(0.8)
+    -ms-transform scale(0.8)
+    transform scale(0.8)
+    opacity 0
+    -webkit-transition all 0.3s
+    -moz-transition all 0.3s
+    transition all 0.3s
+  & ~ .ng-dialog-overlay
+    background dialog-overlay-background-opaque
+
+.ng-dialog-fx-full-screen .ng-dialog-content h3,
+.ng-dialog-fx-full-screen .ng-dialog-content
+  background transparent
+
+.ng-dialog
+  &.ng-dialog-fx-window
+    max-width none
+    width 96%
+
+.ng-dialog-fx-window
+  .ng-dialog-content
+    min-width 600px
+    max-width 100%
+    -webkit-transform scale(0.8)
+    -moz-transform scale(0.8)
+    -ms-transform scale(0.8)
+    transform scale(0.8)
+    opacity 0
+    -webkit-transition all 0.3s
+    -moz-transition all 0.3s
+    transition all 0.3s
+  & ~ .ng-dialog-overlay
+    background dialog-overlay-background-opaque
+
+.ng-dialog-fx-window .ng-dialog-content h3,
+.ng-dialog-fx-window .ng-dialog-content
+  background transparent
+
+.ng-dialog-fx-sticky-top
+  top 0
+  -webkit-transform translateX(-50%)
+  -moz-transform translateX(-50%)
+  -ms-transform translateX(-50%)
+  transform translateX(-50%)
+  .ng-dialog-content
+    -webkit-transform translateY(-200%)
+    -moz-transform translateY(-200%)
+    -ms-transform translateY(-200%)
+    transform translateY(-200%)
+    -webkit-transition all .3s
+    -moz-transition all .3s
+    transition all .3s
+    opacity 0
+
+.ng-dialog-overlay
+  &.ng-dialog-fx-sticky-top
+    -webkit-transform translateY(0)
+    -moz-transform translateY(0)
+    -ms-transform translateY(0)
+    transform translateY(0)
+
+.ng-dialog-fx-slide-right
+  .ng-dialog-content
+    -webkit-transform translateX(20%)
+    -moz-transform translateX(20%)
+    -ms-transform translateX(20%)
+    transform translateX(20%)
+    opacity 0
+    -webkit-transition all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+    -moz-transition all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+    transition all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
