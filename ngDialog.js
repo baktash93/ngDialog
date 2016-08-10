@@ -22,7 +22,8 @@ angular.module('ngDialog', [])
         var compiledDialog = $compile(dialog)(scope);
         document.querySelector(parent).appendChild(compiledDialog[0]);
         $timeout(function(){
-            angular.element(compiledDialog).children('.ng-dialog').addClass('ng-dialog-fx-' + type)
+            options.width ? angular.element(dialog).children().eq(0).css({'max-width': options.width, 'width': options.width}) : "";
+            angular.element(compiledDialog).children().addClass('ng-dialog-fx-' + type)
             setTimeout(function(){
                 angular.element(compiledDialog).children('.ng-dialog').addClass('ng-dialog-show');
             }, 100);
@@ -95,7 +96,7 @@ angular.module('ngDialog', [])
             + "<div ng-transclude></div>"
             + "<a class=\"close-sign-box\" href=\"\" ng-click=\"ngDialogCtrl.close()\"><span class=\"close-sign\"></span></a>"
             + "</div>"
-            + "<div class=\"ng-dialog-overlay\"></div>",
+            + "<div class=\"ng-dialog-overlay\"></div>"
     };
 })
 .directive('ngDialog', ['ngDialogTemplate', function(ngDialogTemplate){
@@ -111,7 +112,6 @@ angular.module('ngDialog', [])
                 $timeout(function(){
                     dialog.parentNode.removeChild(dialog);
                 }, 450);
-                console.log('closing...');
             };
 
             ngDialog.initHideCallback(vm.close);
