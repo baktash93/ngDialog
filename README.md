@@ -26,18 +26,22 @@ The `show` method enables you to pop a dialog with a set of required `options` w
    _Note that the wrapping element in the template should have the `ng-dialog-content` class._
    
  - ___`templateUrl`___
+ - 
    Used to load a template from a relative path
    
  - ___`controller`___
+ - 
    The name of a registered controller that the dialog may consume
    
  - ___`locals`___
+ - 
    An optional object for passing in any values, variables, or any other objects to be used within the scope of the dialog controller instance
  
  - ___`width`___
  
    Optional, sets the width of the dialog to an arbitrary value.
  - ___`type`___
+ - 
    Needed for wiring the CSS styles and animations to the dialog. Defaults to `default` which renders the dialog with a _fade in and scale_ effect. 
    Other possible values are as follows:
    
