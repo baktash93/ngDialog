@@ -100,7 +100,7 @@ Example
         }
     });
     
-[Demo]()
+[Demo](https://github.com/baktash93/ngDialogDemo)
 -
 
 Clone the repo to observe a basic implementation of the `ngDialog` module.
