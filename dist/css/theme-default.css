@@ -71,7 +71,7 @@ button {
   padding: 0.6em 1.2em;
   background: #c0392b;
   color: #fff;
-  font-family: dialog-font;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
   font-size: 1em;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -127,6 +127,10 @@ button:hover {
 }
 .ng-dialog .close-sign-box:hover {
   background: #a5281b;
+}
+.ng-dialog .close-sign-box:hover .close-sign::before,
+.ng-dialog .close-sign-box:hover .close-sign::after {
+  background: #fff;
 }
 .ng-dialog-fx-default .ng-dialog-content {
   -webkit-transform: scale(0.7);
